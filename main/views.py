@@ -30,9 +30,9 @@ class CatalogView(TemplateView):
     template = 'main/base.html'
 
     FILTER_MAPPING = {
-        'color': lambda queryset, value: queryset.filter(color__iexact=value)
-        'min_price': lambda queryset, value: queryset.filter(price_gte=value)
-        'max_price': lambda queryset, value: queryset.filter(price_lte=value)
+        'color': lambda queryset, value: queryset.filter(color__iexact=value),
+        'min_price': lambda queryset, value: queryset.filter(price_gte=value),
+        'max_price': lambda queryset, value: queryset.filter(price_lte=value),
         'size': lambda queryset, value: queryset.filter(product_size__size__name=value)
     }
 
